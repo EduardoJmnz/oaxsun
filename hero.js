@@ -47,7 +47,7 @@
     let i = 0;
     let pct = 0;
 
-    const width = (window.matchMedia?.("(max-width: 520px)").matches) ? 14 : 18;
+    const width = (window.matchMedia?.("(max-width: 520px)").matches) ? 12 : 18;
     introBar.textContent = renderIntroBar(0, width);
     introPct.textContent = "0%";
 
@@ -126,7 +126,7 @@
     
 
 
-  const COMMANDS = ["about", "skymap", "solutions", "work", "contact", "help"];
+  const COMMANDS = ["about", "skymap", "solutions", "contact", "help"];
 
   const isTouch =
     window.matchMedia?.("(pointer: coarse)").matches ||
@@ -388,7 +388,7 @@
     await wait(400);
 
     const box = blockContainer();
-    box.innerHTML = `<div class="line">Welcome to <span class="accent">Oaxsun Technologies</span>. Here you can discover who we are and what we have to offer you.</div><div class="line">&nbsp;</div><div class="line dim">Available commands:</div><div class="line"><span class="accent">/about</span> <span class="accent">/skymap</span> <span class="accent">/solutions</span> <span class="accent">/work</span> <span class="accent">/contact</span> <span class="accent">/help</span></div><div class="line">&nbsp;</div><div class="line dim">Enter a command to start. . .</div>`;
+    box.innerHTML = `<div class="line">Welcome to <span class="accent">Oaxsun Technologies</span>. Here you can discover who we are and what we have to offer you.</div><div class="line">&nbsp;</div><div class="line dim">Available commands:</div><div class="line"><span class="accent">/about</span> <span class="accent">/skymap</span> <span class="accent">/solutions</span> <span class="accent">/contact</span> <span class="accent">/help</span></div><div class="line">&nbsp;</div><div class="line dim">Enter a command to start. . .</div>`;
   }
 
   function wait(ms){ return new Promise(r=>setTimeout(r, ms)); }
@@ -413,7 +413,9 @@
           `<span class="dim">We are a software development company focused on delivering</span> <span class="accent">solutions</span><span class="dim">—not just code.</span>`,
           `<span class="dim">From idea to launch, we help teams ship faster with clean architecture, modern UI, and performance-first engineering.</span>`,
           `<span class="dim">We care about clarity, velocity, and measurable impact: better conversions, better retention, better search visibility.</span>`,
+          `<span class="dim">&nbsp;</span>`,
           `<span class="accent">Mission:</span> <span class="dim">Build reliable software that helps businesses grow through speed, clarity, and measurable results.</span>`,
+          `<span class="dim">&nbsp;</span>`,
           `<span class="accent">Vision:</span> <span class="dim">Become a trusted global partner for modern web, mobile, and SEO solutions—crafted with care and performance-first thinking.</span>`
         ]);
         break;
@@ -424,6 +426,7 @@
         await faxPrint("skymap", "SKYMAP", [
           `<span class="dim">A personalized</span> <span class="accent">star map</span> <span class="dim">generated from your date, location and story.</span>`,
           `<span class="dim">Perfect for gifts, anniversaries, milestones, and memories.</span>`,
+          `<span class="dim">Get your star map for just <span class="accent">$1</span> — one of the best prices online.</span>`,
           `<a class="btn" href="https://eduardojmnz.github.io/skymap" target="_blank" rel="noopener noreferrer">Open SkyMap</a>`
         ]);
         break;
@@ -454,7 +457,7 @@ case "work":
       case "help":
         await faxPrint("help", "HELP", [
           `<span class="dim">Commands:</span>`,
-          `<span class="accent">/about</span> <span class="accent">/skymap</span> <span class="accent">/solutions</span> <span class="accent">/work</span> <span class="accent">/contact</span> <span class="accent">/help</span>`,
+          `<span class="accent">/about</span> <span class="accent">/skymap</span> <span class="accent">/solutions</span> <span class="accent">/contact</span> <span class="accent">/help</span>`,
           `<span class="dim">&nbsp;</span>`,
           `<span class="dim">OAXSUN Technologies 2026 (c) All rights reserved.</span>`
         ]);
